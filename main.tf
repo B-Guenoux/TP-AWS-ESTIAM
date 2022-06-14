@@ -1,8 +1,8 @@
 // Informer les information de connection avec la région
 provider "aws" {
     region = var.AWS_REGION
-    access_key = var.AWS_ACCESS_KEY
-    secret_key = var.AWS_SECRET_KEY 
+    access_key = var.AWS_KEY_ACCESS
+    secret_key = var.AWS_KEY_SECRET
 }
 
 
@@ -61,7 +61,7 @@ resource "aws_key_pair" "mykey" {
 
 // récuperrer l'adresse IP de l'instance
 output "adresse_ip_instance" {
-  value = aws_instance.my_ec2_instance.public_ip
+  value = aws_instance.guenoux_ec2_instance.public_ip
 }
 
 

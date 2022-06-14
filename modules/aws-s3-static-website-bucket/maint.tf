@@ -34,9 +34,9 @@ module "lambda_function" {
     function_name = "guenoux-lambda"
     description = "Fonction lambda pour le TP de Estiam"
     handler = "index.lambda_handler"
-    runtime = "python3.8"
+    runtime = "nodejs16.x"
 
-    source_path = "../src/lambda_function_tp"
+    source_path = "/src/hello-world/hello.js"
 
     tags = {
         Name = "guenoux-lambda"
